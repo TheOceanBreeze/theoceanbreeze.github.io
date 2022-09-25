@@ -7,7 +7,7 @@
     "clean": "rm -rf docs",
     "build": "npm-run-all sass --parallel build:*",
     "start": "DEBUG=Eleventy* npm-run-all sass --parallel watch:*",
-    "sass": "sass --style=compressed _sass/main.sass assets/css/style.css",
+    "sass": "sass --style=compressed _sass/site.sass assets/css/style.css",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "npm run sass -- --watch",
     "build:eleventy": "eleventy",

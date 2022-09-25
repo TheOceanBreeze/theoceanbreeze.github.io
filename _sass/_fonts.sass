@@ -1,0 +1,28 @@
+@use "colors"
+    
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+
+$main: 'Source Sans Pro', monospace
+$alt: 'Open Sans', sans-serif
+
+@mixin sizes
+    h1
+        margin-top: 16px
+        font-size: 5vh
+    h2, h3
+        color: colors.$accent
+        margin-bottom: 8px
+        font-family: $alt
+    h2
+        font-size: 5vh
+    h3
+        font-size: 4vh
+    h4
+        font-family: $alt
+        font-size: 3vh
+    p
+        margin-bottom: 8px
+        font-size: 2vh
+    a
+        color: colors.$accent

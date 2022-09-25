@@ -1,0 +1,36 @@
+@use "colors"
+@use "fonts"
+@use "nav"
+@use "hero"
+	
+* 
+	margin: 0
+body 
+	background-color: colors.$main
+	color: colors.$text
+	font-family: fonts.$main
+ul 
+	list-style-type: none 
+	margin: auto 
+	padding: 0 
+	overflow: hidden 
+	font-weight: bold 
+	background-color: colors.$alt
+
+@include nav.bar
+@include fonts.sizes
+@include hero.header
+
+.content 
+	width: 70%
+	margin: auto 
+.row 
+	display: flex 
+	justify-content: space-between 
+.container 
+	padding: 2px 16px 
+@media only screen and (max-width=1026px) 
+	.content
+		width: 100% 
+		margin: auto 
+		padding: 8px 
