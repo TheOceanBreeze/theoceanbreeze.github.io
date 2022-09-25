@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My personal website",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,8 @@
     "sass": "sass --style=compressed _sass/site.sass assets/css/style.css",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "npm run sass -- --watch",
-    "build:eleventy": "eleventy",
-    "build:sass": "npm run sass",
+    "build:eleventy": "npx --verbose eleventy",
+    "build:sass": "npx sass --style=compressed _sass/site.sass assets/css/style.css",
     "prestart": "npm run clean",
     "prebuild": "npm run clean"
   },
@@ -37,6 +37,7 @@
     "sass": "^1.54.9"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
     "npm-run-all": "^4.1.5"
   }
 }
