@@ -1,22 +1,23 @@
 @use "colors"
 
 @mixin bar
-    ul
-        list-style-type: none
-        margin: auto
-        padding: 0
-        overflow: hidden
-        font-weight: bold
-        background-color: colors.$alt
-    li
-        float: right
-        font-size: 2vh
-        a
-            display: block
-            color: colors.$accent
-            text-align: center
-            padding: 24px 16px
-            text-decoration: none
-            &:hover
+    nav
+        ul
+            list-style-type: none
+            margin: auto
+            padding: 0
+            overflow: hidden
+            font-weight: bold
+            background-color: colors.$alt
+        li
+            float: right
+            font-size: 2vh
+            a
+                display: block
                 color: colors.$accent
-                opacity: 0.7
+                text-align: center
+                padding: 24px 16px
+                text-decoration: none
+                &:hover
+                    color: colors.$accent
+                    opacity: 0.7
