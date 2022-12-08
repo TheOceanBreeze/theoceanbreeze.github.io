@@ -1,13 +1,14 @@
 doctype html
 html(lang="en")
-include ../_includes/head
-include ../_includes/nav
-body
-    if hero
-        .header 
-            h1 #{hero.title}
-            h4 #{hero.subtitle}
-    else
-        .header
-            h1 #{title}
-    .content !{content}
+    include ../_includes/head
+    include ../_includes/nav
+    body
+        if hero
+            .header 
+                h1 #{hero.title}
+                h4 #{hero.subtitle}
+        else
+            .header
+                h1 #{title}
+        
+        .content !{content}

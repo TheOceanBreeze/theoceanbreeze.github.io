@@ -7,11 +7,11 @@
     "clean": "rm -rf docs",
     "build": "npm-run-all sass --parallel build:*",
     "start": "DEBUG=Eleventy* npm-run-all sass --parallel watch:*",
-    "sass": "sass --style=compressed _sass/site.sass assets/css/style.css",
+    "sass": "sass _sass/site.sass | npx postcss -o assets/css/style.css",
     "watch:eleventy": "eleventy --serve",
-    "watch:sass": "npm run sass -- --watch",
+    "watch:sass": "gulp build && gulp watch",
     "build:eleventy": "npx --verbose eleventy",
-    "build:sass": "npx sass --style=compressed _sass/site.sass assets/css/style.css",
+    "build:sass": "gulp build",
     "prestart": "npm run clean",
     "prebuild": "npm run clean"
   },
@@ -33,12 +33,20 @@
     "url": "https://github.com/TheOceanBreeze/website/issues"
   },
   "homepage": "https://github.com/TheOceanBreeze/website#readme",
-  "dependencies": {
-    "sass": "^1.54.9"
-  },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "npm-run-all": "^4.1.5"
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "dart-sass": "^1.25.0",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^5.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.56.1"
   }
 }
