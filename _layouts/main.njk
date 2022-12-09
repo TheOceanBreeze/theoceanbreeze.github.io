@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "../_includes/head.njk" %}
+  <body>
+    {% include "../_includes/nav.njk" %}
+    <div class="header">
+      {% if hero %}
+      <h1>{{ hero.title }}</h1>
+      <h2> {{ hero.subtitle }}</h2>
+      {% elif blog_hero == true %}
+      <h1>{{ title }}</h1>
+      <h2>Published on {{ date | dateReadable }}</h2>
+      {% else %}
+      <h1>{{ title }}</h1>
+      {% endif %}
+    </div>
+    <div class="content">{{ content | safe }}</div>
+  </body>
+</html>

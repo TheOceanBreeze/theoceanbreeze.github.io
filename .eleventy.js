@@ -1,3 +1,5 @@
+const { DateTime } = require("luxon")
+
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
@@ -5,6 +7,10 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.addWatchTarget("assets");
+
+    eleventyConfig.addFilter('dateReadable', date => {
+      return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED)
+    });
 
     return {
         dir: {

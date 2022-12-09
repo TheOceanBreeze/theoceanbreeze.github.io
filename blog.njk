@@ -1,0 +1,12 @@
+---
+layout: 'main'
+title: 'Blog'
+hero:
+    title: "Blog"
+    subtitle: "I write posts here."
+---
+
+{% for blog in collections.post %}
+    <h2><a href="{{ blog.url }}">{{ blog.data.title }}</a></h2>
+    <h4>{{ blog.date | dateReadable }}</h4>
+{% endfor %}
