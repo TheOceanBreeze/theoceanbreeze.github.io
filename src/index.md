@@ -4,6 +4,9 @@ title: 'Home'
 hero:
     title: "TheOceanBreeze"
     subtitle: "Welcome to my website!"
+eleventyNavigation:
+    key: Home
+    order: 1
 ---
 ### Hello! My name is Sean, also known as the nickname TheOceanBreeze.
 

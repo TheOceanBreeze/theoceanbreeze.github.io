@@ -7,7 +7,7 @@
     "clean": "rm -rf docs",
     "build": "npm-run-all sass --parallel build:*",
     "start": "DEBUG=Eleventy* npm-run-all sass --parallel watch:*",
-    "sass": "sass _sass/site.sass | npx postcss -o assets/css/style.css",
+    "sass": "gulp build",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "gulp build && gulp watch",
     "build:eleventy": "npx --verbose eleventy",
