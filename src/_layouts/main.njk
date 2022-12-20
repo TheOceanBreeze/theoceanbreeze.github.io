@@ -13,7 +13,9 @@
       {% else %}
       <h1>{{ title }}</h1>
       {% endif %}
+      <h3>{% if tags %}{{tags}}{% endif %}</h3>
     </div>
     <div class="content">{{ content | safe }}</div>
+    {% include "../_includes/footer.njk" %}
   </body>
 </html>

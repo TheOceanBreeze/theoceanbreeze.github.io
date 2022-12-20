@@ -6,7 +6,8 @@ hero:
     subtitle: "Welcome to my website!"
 eleventyNavigation:
     key: Home
-    order: 1
+    order: 3
+permalink: "/"
 ---
 ### Hello! My name is Sean, also known as the nickname TheOceanBreeze.
 
