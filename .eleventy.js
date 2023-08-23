@@ -12,6 +12,25 @@ module.exports = function(eleventyConfig) {
       return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED)
     });
 
+    eleventyConfig.addPairedShortcode("container", function(content) {
+      return `<div class="container">
+      
+      ${content}
+      
+      </div>
+      `;
+    });
+
+    eleventyConfig.addPairedShortcode("section", function(content) {
+      return `<div class="section">
+      
+      ${content}
+      
+      </div>
+      `;
+    });
+
+
     return {
         dir: {
           // ⚠️ These values are both relative to your input directory.

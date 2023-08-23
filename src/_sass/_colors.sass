@@ -1,4 +1,40 @@
-$main: #2d2d2d
-$alt: #333333
-$accent: #7afdd6
-$text: #c4c4c4
+$nav-background: #0B5586, 
+$nav-link: #edf9fa,
+$nav-link-hover: #b1e2ea
+    
+$background: #FAF6E8
+
+$hero-background: #0178BD
+$hero-text: white
+$hero-button: #4BC7CF
+
+$text-heading: #6662C2
+$text-subheading: #2DA7C7
+$text-link: #1E97C4
+
+$footer-background: #1B5584
+$footer-text: $nav-link
+
+@mixin setcolors()
+    body
+        background-color: $background
+
+    nav
+        background: $nav-link
+        ul li a
+            color: $nav-link
+            &:hover
+                color: $nav-link-hover
+
+    .header 
+        background: $hero-background
+        h1, h2
+            color: $hero-text
+        ul.tags li
+                background-color: $hero-button
+                color: black
+
+    footer
+        background: $footer-background
+        p
+            color: $footer-text
