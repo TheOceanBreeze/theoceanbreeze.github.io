@@ -1,6 +1,6 @@
 {
     "layout": "post",
     "tags": "post",
-    "permalink": "blog/post/{{ page.date | date: '%Y-%m-%d' }}-{{ page.fileSlug }}",
+    "permalink": "blog/post/{{ page.date | date: '%Y-%m-%d' }}-{{ page.fileSlug }}/",
     "blog_hero": true
 }
