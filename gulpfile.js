@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
+const htmlmin = require('gulp-htmlmin');
 
 gulp.task('css', function () {
     return gulp

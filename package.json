@@ -48,5 +48,9 @@
     "postcss": "^8.4.19",
     "postcss-cli": "^10.1.0",
     "sass": "^1.66.1"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
+    "html-minifier": "^4.0.0"
   }
 }
