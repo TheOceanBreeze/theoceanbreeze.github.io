@@ -1,7 +1,8 @@
-{% macro defaulttags() %}
+{% macro defaulttags(ttitle) %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ ttitle }}</title>
 {% endmacro %}
 
 {% macro opengraph(otitle, description, ourl, site_name, type) %}
@@ -27,14 +28,14 @@
   <meta name="twitter:creator" content="{{ creator }}">
 {% endmacro %}
 
-{% macro render_metatags(title, description, url, site_name, author, type, keywords) %}
-    {{ defaulttags() }}
+{% macro render_metatags(mtitle, description, url, site_name, author, type, keywords) %}
+    {{ defaulttags(mtitle) }}
     {{ opengraph(rtitle, description, url, site_name, type) }}
     {{ twitter(description, author) }}
     {{ meta(description, url, author, keywords) }}
 {% endmacro %}
 
-{{ render_metatags("{{ page.title }} | TheOceanBreeze", 
+{{ render_metatags( title + " | TheOceanBreeze's Website", 
     "Hey there, this is the personal website for TheOceanBreeze.",
     "https://theoceanbreeze.github.io",
     "TheOceanBreeze's Website",
