@@ -1,9 +1,9 @@
 {% if hero %}
-      <h1>{{ hero.title }}</h1>
-      <h2> {{ hero.subtitle }}</h2>
-      {% elif blog_hero == true %}
-      <h1>{{ title }}</h1>
-      <h2>Published on {{ date | dateReadable }}</h2>
-      {% else %}
-      <h1>{{ title }}</h1>
+  <h1>{{ hero.title }}</h1>
+  <h2>{{ hero.subtitle }}</h2>
+{% elif blog_hero %}
+  <h1>{{ title }}</h1>
+  <h2>Published on {{ date | dateReadable }}</h2>
+{% else %}
+  <h1>{{ title }}</h1>
 {% endif %}

@@ -9,13 +9,13 @@
   <meta property="og:title" content="{{ otitle }}"/>
   <meta property="og:description" content="{{ description }}"/>
   <meta property="og:url" content="{{ ourl }}"/>
-  <meta property="og:site_name" content="TheOceanBreeze"/>
-  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="{{ site_name }}"/>
+  <meta property="og:type" content="{{ type }}"/>
   <meta property="og:locale" content="en_US"/>
 {% endmacro %}
 
 {% macro meta(description, canonical, author, keywords) %}
-  <meta name="description" content="{{ description }} ">
+  <meta name="description" content="{{ description }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ canonical }}">
   <meta name="author" content="{{ author }}">
@@ -29,16 +29,18 @@
 {% endmacro %}
 
 {% macro render_metatags(mtitle, description, url, site_name, author, type, keywords) %}
-    {{ defaulttags(mtitle) }}
-    {{ opengraph(rtitle, description, url, site_name, type) }}
-    {{ twitter(description, author) }}
-    {{ meta(description, url, author, keywords) }}
+  {{ defaulttags(mtitle) }}
+  {{ opengraph(mtitle, description, url, site_name, type) }}
+  {{ twitter(description, author) }}
+  {{ meta(description, url, author, keywords) }}
 {% endmacro %}
 
-{{ render_metatags( title + " | TheOceanBreeze's Website", 
+{{ render_metatags(
+    title + " | TheOceanBreeze's Website", 
     "Hey there, this is the personal website for TheOceanBreeze.",
     "https://theoceanbreeze.github.io",
     "TheOceanBreeze's Website",
     "TheOceanBreeze",
     "website",
-    "theoceanbreeze, website, personal, blog") }}
+    "theoceanbreeze, website, personal, blog"
+) }}

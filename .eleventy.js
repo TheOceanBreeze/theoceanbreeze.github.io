@@ -1,10 +1,14 @@
 const { DateTime } = require("luxon")
 const htmlmin = require("html-minifier");
 
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite");
 
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPlugin(eleventyNavigationPlugin)
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addPlugin(EleventyVitePlugin);
 
     eleventyConfig.addPassthroughCopy('src/assets').addWatchTarget("src/assets");
 

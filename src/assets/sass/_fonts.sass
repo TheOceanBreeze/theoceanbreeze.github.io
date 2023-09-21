@@ -1,26 +1,47 @@
 @use "colors"
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
 
-$main: 'Source Sans Pro', monospace
-$alt: 'Open Sans', sans-serif
+$primaryFont: 'Open Sans', sans-serif
 
 @mixin sizes
+
     h1, h2, h3, h4, p
         margin: 2vh auto
+
+    h1, h2
+        font-weight: 700
+
+    h3
+        font-weight: 600
+
+    h4, h5
+        font-weight: 500
+
     h1, h2, h3
         color: #6662C2
-        font-weight: 900
+
     h4, h5, h6
         color: #2DA7C7
-        font-weight: 400
+
     h1
         font-size: 24pt
+
     h2
-        font-size: 18pt
-    h3, h4, h5, h6
-        font-size: 17pt
+        font-size: 20pt
+
+    h3
+        font-size: 16pt
+
+    h4
+        font-size: 14pt
+
+    h5
+        font-size: 12pt
+
     p, li
         font-size: 16pt
         font-weight: 300
+
     a
         color: #1E97C4
+        font-weight: 500
