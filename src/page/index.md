@@ -29,7 +29,7 @@ Hello! My name is Sean, also known as the nickname TheOceanBreeze. Welcome to my
 
 ### More Hobbies
 
-I also like to play video games from time to time. My favorites are SuperTux, Cities: Skylines and Portal. Perhaps I will make a page dedicated to my favorite things soon.
+I also like to play video games from time to time. My favorites are SuperTux, Cities: Skylines, and Portal. Perhaps I will make a page dedicated to my favorite things soon.
 
 ## About
 
