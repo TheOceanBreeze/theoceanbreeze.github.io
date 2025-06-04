@@ -1,17 +1,13 @@
-{% macro render(page) %}
-    {% include "../_includes/" + page + ".njk" %}
-{% endmacro %}
-
 <!DOCTYPE html>
 <html lang="en">
-  {{ render("head") }}
+  {% include "../_includes/head.njk" %}
   <body>
-    {{ render("nav") }}
+    {% include "../_includes/nav.njk" %}
     <div class="header">
-      {{ render("hero") }}
-      {{ render("tags") }}
+      {% include "../_includes/hero.njk" %}
+      {% include "../_includes/tags.njk" %}
     </div>
     <div class="content">{{ content | safe }}</div>
-    {{ render("footer") }}
+    {% include "../_includes/footer.njk" %}
   </body>
 </html>

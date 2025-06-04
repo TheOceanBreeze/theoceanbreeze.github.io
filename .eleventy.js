@@ -15,6 +15,10 @@ module.exports = function(eleventyConfig) {
       return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED)
     });
 
+    eleventyConfig.addShortcode("currentYear", function () {
+      return new Date().getFullYear().toString();
+    });
+
     eleventyConfig.addPairedShortcode("container", createDivWrapper("container"));
 
     eleventyConfig.addPairedShortcode("section", createDivWrapper("section"));
